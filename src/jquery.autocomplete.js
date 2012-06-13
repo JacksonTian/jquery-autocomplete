@@ -555,7 +555,7 @@
             callback(data);
         } else {
             var self = this;
-            var dataType = self.options.remoteDataType === 'json' ? 'json' : 'text';
+            var dataType = self.options.remoteDataType === 'json' || self.options.remoteDataType === 'jsonp' ? 'json' : 'text';
             var ajaxCallback = function(data) {
                 var parsed = false;
                 if (data !== false) {
